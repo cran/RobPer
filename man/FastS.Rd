@@ -1,7 +1,7 @@
 \encoding{utf8}
 \name{FastS}
 \alias{FastS}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 S-Regression using the Fast-S-Algorithm
 }
@@ -12,7 +12,7 @@ Performs S-Regression using the Fast-S-Algorithm.
 FastS(x, y, Scontrol=list(int = FALSE, N = 100, kk = 2, tt = 5, b= .5,
  cc = 1.547, seed=NULL), beta_gamma)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{x}{
 numeric \eqn{(n\times p)}{(n,p)}-matrix: Designmatrix.
@@ -65,8 +65,6 @@ Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calcu
 \author{ Matias Salibian-Barrera and Victor Yohai, modified by 
 Anita M. Thieler } 
 
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 Applied in \code{\link{RobPer}}. See \code{\link{FastTau}} for example.

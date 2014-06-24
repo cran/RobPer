@@ -1,16 +1,15 @@
 Package: RobPer
 Type: Package
-Title: Periodogram methods for irregularly sampled time series
-        (especially light curves occurring in astroparticle physics)
-        and periodicity detection methods
-Version: 1.0
-Date: 2013-10-01
+Title: Robust periodogram methods for irregularly sampled time series
+        and robust periodicity detection methods
+Version: 1.1
+Date: 2014-06-24
 Author: Anita M. Thieler, Jonathan Rathjens and Roland Fried, with contributions from Brenton R. Clarke, Uwe Ligges, Matias Salibian-Barrera, Gert Willems and Victor Yohai
-Maintainer: Anita M. Thieler <anita.thieler@tu-dortmund.de>
+Maintainer: Jonathan Rathjens <jonathan.rathjens@tu-dortmund.de>
 Depends: robustbase, quantreg, splines, BB, rgenoud
-Description: Package to calculate periodograms based on (robustly) fitting periodic functions to light curves (irregularly observed time series, possibly with measurement accuracies). Three main functions are included: RobPer calculates the periodogram. Outlying periodogram bars (indicating a period) can be detected with betaCvMfit. Artificial light curves can be generated using the function tsgen. For more details see TRSFB876.
+Description: Package to calculate periodograms based on (robustly) fitting periodic functions to light curves (irregularly observed time series, possibly with measurement accuracies, occurring in astroparticle physics). Three main functions are included: RobPer calculates the periodogram. Outlying periodogram bars (indicating a period) can be detected with betaCvMfit. Artificial light curves can be generated using the function tsgen. For more details see Thieler, Fried and Rathjens (2013).
 License: GPL-2 | GPL-3
-Packaged: 2013-10-01 16:30:43 UTC; thieler
+Packaged: 2014-06-24 09:35:19 UTC; jrathjens
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-10-01 19:29:51
+Date/Publication: 2014-06-24 12:13:44

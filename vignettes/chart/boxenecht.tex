@@ -1,0 +1,579 @@
+
+
+%Box 2
+\newcommand{\BwZ}{
+\mysize
+$\zeta\leftarrow\zeta_{L_2}$
+}
+
+
+
+
+%Box 3
+\newcommand{\BwE}{
+\mysize
+\parbox{\zelleIbisE}{
+\abovedisplayskip 0pt
+\belowdisplayskip 2pt
+$$\begin{aligned}
+s&\leftarrow \mathds 1_n\\
+\widetilde y_i &\leftarrow y_i/s_i, i=1,\ldots,n\\
+\mathfrak{i}_i &\leftarrow \mathds 1 / s_i, i=1,\ldots,n\\
+\end{aligned}$$}
+}
+
+
+
+%Box 4
+\newcommand{\BwA}{
+\mysize
+\parbox{\zelleAbisG}{
+$$\begin{aligned}
+\widetilde y_i &\leftarrow y_i/s_i, i=1,\ldots,n\\
+\mathfrak{i}_i &\leftarrow \mathds 1 / s_i, i=1,\ldots,n\\
+\end{aligned}$$}
+}
+
+%Box 5
+\newcommand{\BwS}{
+\mysize
+For $p_i$, $i=1,\ldots,q$
+}
+
+%Box 6
+\newcommand{\BwG}{
+\mysize
+\parbox{\zelleZ}{
+\centering
+$\widehat \mu$ is the \text{\code{regression}} estimate in $\widetilde y= \mathfrak{i}\mu + \epsilon$.\\
+$\begin{aligned}
+e &\leftarrow \widetilde y - \mathfrak{i}\widehat\mu\\
+\SY&\leftarrow\zeta(e)\\
+\end{aligned}$
+}}
+
+
+\newcommand{\BwF}{\Huge \textbf{7}}
+
+%Box 8
+\newcommand{\BwB}{
+\mysize
+\parbox{0.95\zelleZbisE}{\centering
+$\widetilde m \leftarrow$ number of columns of $\widetilde X$\\
+ \fbox{\text{\code{ltsReg(...,nsamp=50)}}}:\\
+$\widehat \beta$ is the LTS estimate with trimming $h(\widetilde m)$ in\\
+$\widetilde y= \widetilde X\beta + \epsilon$.\\
+$r \leftarrow \widetilde y - \widetilde X\widehat \beta$
+}}
+
+
+
+\newcommand{\BwQ}{\Huge \textbf{9}}
+\newcommand{\BwIO}{\Huge \textbf{10}}
+\newcommand{\BwII}{\Huge \textbf{11}}
+\newcommand{\BwIZ}{\Huge \textbf{12}}
+\newcommand{\BwIE}{\Huge \textbf{13}}
+
+
+
+%Box 14
+\newcommand{\BwIA}{
+\mysize
+$\widehat \sigma \leftarrow 1$
+}
+
+
+
+%Box 15
+\newcommand{\BwIS}{
+\mysize
+$\widehat\sigma\leftarrow \frac{\med(|r_j|, r_j\neq0)}{0.675}$
+}
+
+%Box 16
+\newcommand{\BwIG}{
+\mysize
+\parbox{\zelleZbisE}{
+
+$$\begin{aligned}
+\SE &\leftarrow \sum_{j=1}^n \rho\left(\frac{\widetilde y_j - \widetilde x_j\widehat\beta}{\widehat \sigma}\right)\rule{0cm}{0.7cm}\\
+\SY &\leftarrow  \sum_{j=1}^n \rho\left(\frac{\widetilde y_j -  \widetilde{\mathfrak{i}}\widehat\mu}{\widehat \sigma}\right)
+\end{aligned}$$
+\rule{1cm}{0cm}
+}}
+
+
+
+%Box 17
+\newcommand{\BwIF}{
+\mysize
+\parbox{0.95\zelleZbisE}{\centering
+$\widehat \mu$ is the $L_1$ estimate in $\widetilde y= \widetilde{\mathfrak{i}}\mu + \epsilon$.\\
+$e\leftarrow \widetilde y - \mathfrak{i} \widehat\mu$
+}}
+
+
+\newcommand{\BwIB}{\Huge \textbf{18}}
+\newcommand{\BwIQ}{\Huge \textbf{19}}
+\newcommand{\BwZO}{\Huge \textbf{20}}
+\newcommand{\BwZI}{\Huge \textbf{21}}
+
+
+%Box 22
+\newcommand{\BwZZ}{
+\mysize
+$\Per(p_i)\leftarrow 1-\SE \big/ \SY$
+}
+
+
+%Box 23
+\newcommand{\BwZE}{
+\mysize
+\centering
+\underline{Return value}: Per($p$), $p=(p_1,\ldots,p_q)^\transp$
+}
+
+
+\newcommand{\BwZA}{\Huge \textbf{24}}
+\newcommand{\BwZS}{\Huge \textbf{25}}
+
+
+%Box 26 (statt 6 und 7)
+\newcommand{\BwZG}{
+\mysize
+\centering
+$X \leftarrow$ \fbox{\code{Xgen(model, p)}} with \code{p} as the period $p_i$
+}
+
+
+
+
+%Box 27
+\newcommand{\BwZF}{
+\parbox{0.78\laengeIII}{
+\mysize
+$$\begin{aligned}
+\mathfrak{e}' &\leftarrow  \mathfrak{e} \rule{0cm}{0.7cm}\\
+\widehat{\text{\code{yy}}} &\leftarrow \text{\code{yy}}  \sqrt{\text{\code{W}}(\mathfrak{e}' / \sigma)}\\
+\widehat{\mathfrak{X}} &\leftarrow \mathfrak{X}  \sqrt{\text{\code{W}}(\mathfrak{e}'  / \sigma)}\\
+\widehat b&\leftarrow  \text{ $L_2$ solution of } \widehat{\text{\code{yy}}} = \widehat{\mathfrak{X}} b + \epsilon\\
+\mathfrak{e} &\leftarrow \text{\code{yy}} -  \mathfrak{X}\widehat b \rule[-0.3cm]{0cm}{0.5cm}
+\end{aligned}$$
+}}
+
+
+
+%Box 28
+\newcommand{\BwZB}{
+\mysize
+\rule[2mm]{0pt}{5pt}$\widetilde X \leftarrow X/s$
+}
+
+
+%Box 29
+\newcommand{\BwZQ}{
+\mysize
+\parbox{\zelleZ}{\center
+\fbox{\code{genoud}}\\[0.5em]
+$r \leftarrow \widetilde y - \widetilde X\widehat \beta$
+}}
+
+
+%Box 30
+\newcommand{\BwEO}{
+\mysize
+Check arguments, remove incomplete cases
+}
+
+
+%Box 31
+\newcommand{\BwEI}{
+\mysize
+\parbox{\zelleG}{
+\abovedisplayskip 0pt
+\belowdisplayskip 2pt
+$$\begin{aligned}
+\rho  &\leftarrow\rho_{MB}\\
+ W    &\leftarrow W_{MB}\\
+\zeta &\leftarrow \zeta_{MB}
+\end{aligned}$$
+}
+}
+
+
+%Box 32
+\newcommand{\BwEZ}{
+\mysize
+$\zeta(r)\leftarrow$ dummy
+}
+
+
+%Box 33
+\newcommand{\BwEE}{
+\mysize
+\parbox{\zelleS}{\centering
+\rule[6pt]{0pt}{5pt} $\widetilde m \leftarrow$ number of colums of X\\
+$\widehat \mu$ is the LTS estimate with trimming $h(\widetilde m)$ in
+$\widetilde y=  \mathfrak{i}\mu + \epsilon$.\\
+$\begin{aligned}
+e& \leftarrow \widetilde y - \mathfrak{i}\widehat\mu\\
+\SY& \leftarrow\zeta(e)\rule[-6pt]{0pt}{5pt}
+\end{aligned}$
+}}
+
+%Box 34
+\newcommand{\BwEA}{
+\mysize
+\parbox{\zelleAbisS}{\centering
+$\widehat \beta$ is the \code{regression} estimate in\\
+$\widetilde y= \widetilde X\beta + \epsilon$.\\
+$\begin{aligned}
+r &\leftarrow \widetilde y - \widetilde X\widehat\beta\\
+\SE&\leftarrow\zeta(r)
+\end{aligned}$
+}}
+
+\newcommand{\BwES}{\Huge \textbf{35}}
+\newcommand{\BwEG}{\Huge \textbf{36}}
+
+
+%Box 37
+\newcommand{\BwEF}{
+\mysize
+$\zeta\leftarrow \zeta_{L_1}$
+}
+
+%Box 38
+\newcommand{\BwEB}{
+\mysize
+$\zeta\leftarrow\zeta_{LTS}$
+}
+
+
+
+%Box 39
+\newcommand{\BwEQ}{
+\mysize
+\parbox{\zelleS}{
+ $$\begin{aligned}
+\rule{0pt}{0.5cm}\rho&\leftarrow\rho_{MH}\\
+W &\leftarrow W_{MH}
+\end{aligned}$$
+}
+}
+
+
+%Box 40
+\newcommand{\BwAO}{
+\mysize
+\parbox{\zelleAbisG}{
+\centering
+\code{design} $\leftarrow$ \code{"step"}
+}}
+
+%Box 41
+\newcommand{\BwAI}{
+\mysize
+\parbox{\zelleIbisE}{
+\centering
+\code{design} $\leftarrow$ \code{model}
+}
+}
+
+%Box 42
+\newcommand{\BwAZ}{
+\mysize
+\parbox{\zelleAbisG}{
+$$\begin{aligned}
+\text{\code{design}} &\leftarrow \text{\code{"stepB"}}\\
+\Per_1(p) &\leftarrow \Per(p), p=(p_1,\ldots,p_q)^\transp
+\end{aligned}$$
+}
+}
+
+%Box 43
+\newcommand{\BwAE}{
+\mysize
+\parbox{\zelleAbisG}{
+$$\begin{aligned}
+\Per_2(p) &\leftarrow \Per(p), p=(p_1, \ldots, p_q)^\transp\\
+\Per(p)   &\leftarrow \frac12 \left(\Per_1(p) + \Per_2(p)\right)
+\end{aligned}$$
+}}
+
+
+% Box 44
+\newcommand{\BwAA}{
+\mysize
+\parbox{0.95\laengeIII}{
+\begin{alignat*}{3}
+&\text{\underline{Arguments}}\\
+\mathpzc{y}         &\in \mathds R^n                       && \text{Observations}\\
+\mathfrak{X}&\in \mathds R^{n\times m}              && \text{Designmatrix}\\
+\text{\code{W}}          & :\mathds{R}\rightarrow \mathds{R^+_0} && \text{IRWLS function}\\
+\mathfrak{e}&\in \mathds R^n                       &&\text{Vector of residuals}\\
+\sigma     &\in \mathds R^+_{\backslash\{0\}}                       &&\text{Variance}\\
+\text{\code{tol}}           & \in \mathds R^+_{\backslash\{0\}} && \text{Precision for convergence}
+\end{alignat*}
+}}
+
+%Box 45
+\newcommand{\BwAS}{
+\mysize
+\centering
+\underline{Return value}: $\widehat b$
+}
+
+%Box 46
+\newcommand{\BwAG}{
+\mysize
+\parbox{0.95\zelleZ}{\centering
+$\widehat \beta \leftarrow$ \fbox{\code{IRWLS}}\\
+with $(\widetilde y, \widetilde X,W, r, \widehat \sigma, \text{\code{tol}})$ as arguments\\ (\code{yy}, \code{matrix}\texttt{\textunderscore}, \code{W}, \code{residuals}\texttt{\textunderscore},\code{scale}\texttt{\textunderscore} , \code{tol})
+}}
+
+%Box 47
+\newcommand{\BwAF}{
+\mysize
+\parbox{0.95\zelleZbisE}{
+$\widehat \mu \leftarrow$ \fbox{\code{IRWLS}} with ($\widetilde y, \mathfrak{i}, W, e, \widehat \sigma, \text{\code{tol}}$)  \\ as arguments (\code{yy}, \code{matrix}\texttt{\textunderscore}, \code{W}, \code{residuals}\texttt{\textunderscore},\code{scale}\texttt{\textunderscore} , \code{tol})
+}}
+
+
+
+\newcommand{\BwAB}{\Huge \textbf{48}}
+\newcommand{\BwAQ}{\Huge \textbf{49}}
+
+%Box 50
+\newcommand{\BwSO}{
+\mysize
+$\Per(p_i)\leftarrow$\code{NA}
+}
+
+
+
+%Box 51
+\newcommand{\BwSI}{
+\mysize
+\parbox{\zelleS}{
+\centering
+\fbox{\code{genoud}}\\[0.3cm]
+$\begin{aligned}
+r &\leftarrow \widetilde y - \widetilde X\widehat\beta\\
+\SE&\leftarrow\zeta(r)
+\end{aligned}$
+}}
+
+
+
+%Box 52
+\newcommand{\BwSZ}{
+\mysize
+\parbox{\zelleAbisS}{
+\centering
+$\widehat \mu$ is the LTS estimate with\\ trimming $h(\widetilde m)$)in $\widetilde y= \mathfrak{i}\mu + \epsilon$.\\
+$\begin{aligned}
+e &\leftarrow \widetilde y -\mathfrak{i}\widehat\mu\\
+\SY&\leftarrow\zeta(e)
+\end{aligned}$
+}}
+
+
+%Box 53
+\newcommand{\BwSE}{
+\mysize
+\parbox{\zelleAbisS}{
+\mysize
+\begin{tabularx}{\zelleAbisS}{C{0.15\zelleAbisS}|C{0.305\zelleAbisS}|C{0.305\zelleAbisS}|C{0.23\zelleAbisS}}
+\multicolumn{4}{c}{ \code{model}}\\
+ \multicolumn{3}{c}{\diagbox[height=0.5cm,width=0.77\zelleAbisS]}&  \multicolumn{1}{c}{\diagbox[height=0.5cm,dir=NE,width=0.23\zelleAbisS]}\\
+         \code{"sine"} &\code{"fourier(2)"}&\code{"fourier(3)"}&\code{"splines"}\\
+         \hline
+         $m\leftarrow3$& $m\leftarrow5$& $m\leftarrow7$& $m\leftarrow4$\\
+
+	\end{tabularx}
+}}
+
+
+
+%Box 54
+\newcommand{\BwSA}{
+\parbox{\zelleG}{
+$$\begin{aligned}
+\mu&\leftarrow \text{ dummy}\\
+\SY&\leftarrow \text{ dummy}
+\end{aligned}$$
+}
+}
+
+%Box 55
+\newcommand{\BwSS}{
+\mysize
+\parbox{\zelleE}{
+\centering
+$\SY$ is the scale output of the fit to
+$\widetilde y= \mathfrak{i}\mu + \epsilon$
+}
+}
+
+%Box 56
+\newcommand{\BwSG}{
+\mysize
+\parbox{0.95\zelleZ}{
+\centering
+$\widehat \beta$ is the \code{regression} estimate in\\
+$\widetilde y= \widetilde X\beta + \epsilon$.\\
+using $\widehat \sigma$ as scale estimate\\
+and $\widehat \beta$ as initial coefficient estimate\\
+}
+}
+
+
+
+\newcommand{\BwSF}{\Huge \textbf{57}}
+\newcommand{\BwSB}{\Huge \textbf{58}}
+\newcommand{\BwSQ}{\Huge \textbf{59}}
+\newcommand{\BwGO}{\Huge \textbf{60}}
+\newcommand{\BwGI}{\Huge \textbf{61}}
+\newcommand{\BwGZ}{\Huge \textbf{62}}
+\newcommand{\BwGE}{\Huge \textbf{63}}
+\newcommand{\BwGA}{\Huge \textbf{64}}
+\newcommand{\BwGS}{\Huge \textbf{65}}
+\newcommand{\BwGG}{\Huge \textbf{66}}
+\newcommand{\BwGF}{\Huge \textbf{67}}
+\newcommand{\BwGB}{\Huge \textbf{68}}
+\newcommand{\BwGQ}{\Huge \textbf{69}}
+\newcommand{\BwFO}{\Huge \textbf{70}}
+\newcommand{\BwFI}{\Huge \textbf{71}}
+\newcommand{\BwFZ}{\Huge \textbf{72}}
+\newcommand{\BwFE}{\Huge \textbf{73}}
+\newcommand{\BwFA}{\Huge \textbf{74}}
+\newcommand{\BwFS}{\Huge \textbf{75}}
+\newcommand{\BwFG}{\Huge \textbf{76}}
+\newcommand{\BwFF}{\Huge \textbf{77}}
+\newcommand{\BwFB}{\Huge \textbf{78}}
+\newcommand{\BwFQ}{\Huge \textbf{79}}
+\newcommand{\BwBO}{\Huge \textbf{80}}
+\newcommand{\BwBI}{\Huge \textbf{81}}
+\newcommand{\BwBZ}{\Huge \textbf{82}}
+\newcommand{\BwBE}{\Huge \textbf{83}}
+\newcommand{\BwBA}{\Huge \textbf{84}}
+\newcommand{\BwBS}{\Huge \textbf{85}}
+\newcommand{\BwBG}{\Huge \textbf{86}}
+\newcommand{\BwBF}{\Huge \textbf{87}}
+\newcommand{\BwBB}{\Huge \textbf{88}}
+\newcommand{\BwBQ}{\Huge \textbf{89}}
+
+
+% Decision 1
+\newcommand{\DwI}{
+\mysize
+\code{weighting}
+}
+
+
+% Decision 3
+\newcommand{\DwE}{
+\mysize
+\code{var1}
+}
+
+% Decision 4
+\newcommand{\DwA}{
+\mysize
+$\underset{j}\max \frac{|\mathfrak{e}'- \mathfrak{e}|}{\sigma} < \text{\code{tol}}$
+\phantom{m}
+}
+
+
+% Decision 6
+\newcommand{\DwG}{
+\mysize
+\code{regression}
+}
+
+
+% Decision 7
+\newcommand{\DwF}{
+\mysize
+\code{regression} = \code{"bisquare"}
+}
+
+
+%Decision 8
+\newcommand{\DwB}{
+\mysize
+\code{regression} $\in$ \{\code{"huber"}, \code{"bisquare"}\}
+}
+
+
+%Decision 9
+\newcommand{\DwQ}{
+\mysize
+\code{model} =  \code{"2step"}
+}
+
+
+%Decision 11
+\newcommand{\DwII}{
+\mysize
+\code{model} = \code{"2step"}
+}
+
+
+
+%Decision 14
+\newcommand{\DwIA}{
+\mysize
+Enough independent rows in $\widetilde X$
+}
+
+%Decision 15
+\newcommand{\DwIS}{
+\mysize
+\code{regression}=\code{"LTS"} $\wedge$ \code{LTSopt=TRUE}
+}
+
+
+%Decision 16
+\newcommand{\DwIG}{
+\mysize
+\code{regression} $\in$ \{\code{"huber"}, \code{"bisquare"}\}
+}
+
+%Decision 17
+\newcommand{\DwIF}{
+\mysize
+\code{regression}=\code{"LTS"}
+}
+
+%Decision 18
+\newcommand{\DwIB}{
+\mysize
+\code{model} $\in$ \{\code{"step"}, \code{"2step"}\}
+}
+
+%Decision 19
+\newcommand{\DwIQ}{
+\mysize
+\code{regression}=\code{"LTS"}  $\wedge$
+\code{design} $\in$  \{\code{"step"}, \code{"stepB"}\}
+}
+
+%Decision 20
+\newcommand{\DwZO}{
+\mysize
+\code{regression}
+}
+
+
+
+\newcommand{\Legende}{\Huge \textbf{Legend}}
+
+
+
+
+
+
+
+

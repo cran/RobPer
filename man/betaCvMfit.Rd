@@ -94,8 +94,7 @@ curve(myf.CvM, add=TRUE, lwd=2, col="green")
 # Searching for outliers...
 abline(v=qbeta((0.95)^(1/50), shape1=par.CvM[1], shape2=par.CvM[2]), col="green")
 
-legend("topright", fill=c("black", "green","blue", "red"), 
-       legend=c("true", "CvM", "robust moments", "moments"))
+legend("topright", fill=c("black", "green","blue", "red"),
+    legend=c("true", "CvM", "robust moments", "moments"))
 box()
 }
-

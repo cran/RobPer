@@ -1,6 +1,6 @@
 \name{FastTau}
 \alias{FastTau}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Tau-Regression using the Fast-tau-Algorithm
 }
@@ -11,7 +11,7 @@ Performs tau-Regression using the Fast-tau-Algorithm.
 FastTau(x, y, taucontrol = list(N = 500, kk = 2, tt = 5, rr = 2, approximate = 0),
  beta_gamma)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{x}{
 numeric \eqn{(n\times p)}{(n,p)}-matrix: Designmatrix.
@@ -51,8 +51,6 @@ Matias Salibian-Barrera and Gert Willems, modified by Anita M. Thieler
 }
 
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
 Applied in \code{\link{RobPer}}.
 }
@@ -60,10 +58,10 @@ Applied in \code{\link{RobPer}}.
 set.seed(22)
 # Generate a disturbed light curve
 lightcurve <- tsgen(ttype="unif",ytype="sine" , pf=7, redpart=0.1, interval=TRUE,
-     npoints=100, ncycles=10, ps=7, SNR=4, alpha=0)
+    npoints=100, ncycles=10, ps=7, SNR=4, alpha=0)
 tt <- lightcurve[,1]
 y  <- lightcurve[,2]
-s  <- rep(1,100)  #unweighted regression
+s  <- rep(1,100)  # unweighted regression
 
 plot(tt, y, type="l", main="Fitting a sine to a disturbed lightcurve")
 
@@ -77,14 +75,14 @@ beta_FastS <- FastS(X, y)$beta
 beta_lm <- lm(y~0+X)$coeff
 
 # Plot:
-sin7_fun<- function(t, beta) beta[1]+ beta[2]*sin(t*2*pi/7)+ beta[3]*cos(t*2*pi/7)
-sin_FastTau<- function(t) sin7_fun(t, beta_FastTau)
-sin_FastS  <- function(t) sin7_fun(t, beta_FastS)
-sin_lm     <- function(t) sin7_fun(t, beta_lm)
+sin7_fun <- function(t, beta) beta[1]+ beta[2]*sin(t*2*pi/7)+ beta[3]*cos(t*2*pi/7)
+sin_FastTau <- function(t) sin7_fun(t, beta_FastTau)
+sin_FastS <- function(t) sin7_fun(t, beta_FastS)
+sin_lm <- function(t) sin7_fun(t, beta_lm)
 curve(sin_FastTau, col="green", add=TRUE)
 curve(sin_FastS, col="blue", add=TRUE, lty=2)
 curve(sin_lm, col="red", add=TRUE)
 
-legend("topleft", fill=c("black", "red", "green", "blue"), 
-       legend=c("Light Curve (disturbed)", "Least Squares Fit", "FastTau Fit", "FastS Fit"))
+legend("topleft", fill=c("black", "red", "green", "blue"),
+    legend=c("Light Curve (disturbed)", "Least Squares Fit", "FastTau Fit", "FastS Fit"))
 }

@@ -11,7 +11,7 @@ Generates an equidistant time series of power law noise according to Timmer and 
 \usage{
 TK95(N = 1000, alpha = 1.5)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{N}{
 integer value: Length of the generated time series.
@@ -44,7 +44,6 @@ This function is used in Thieler et al. (2013). See also Thieler, Fried and Rath
 }
 
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 Applied in \code{\link{tsgen}} by \code{\link{TK95_uneq}}.
@@ -52,7 +51,7 @@ Applied in \code{\link{tsgen}} by \code{\link{TK95_uneq}}.
 \examples{
 set.seed(31)
 # Generate power law noise with exponent alpha=1.5:
-y  <- TK95(N=2000, alpha=1.5)
+y <- TK95(N=2000, alpha=1.5)
 tt <- seq(along=y)
 
 # Show time series:
@@ -61,7 +60,7 @@ plot(tt,y, type="l", main="Power Law Noise", xlab="t", ylab="y")
 # Plot Fourier periodogram with log-axes:
 temp <- spectrum(y, plot=FALSE)
 plot(log(temp$freq), log(temp$spec), main="log-log-Fourier periodogram",
-     xlab="log(frequency)", ylab="log(periodogram)")
+    xlab="log(frequency)", ylab="log(periodogram)")
 
 # A line with slope -alpha for comparison
 abline(a=8, b=-1.5, col="red")

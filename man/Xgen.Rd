@@ -1,6 +1,6 @@
 \name{Xgen}
 \alias{Xgen}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Designmatrix generator
 }
@@ -8,7 +8,7 @@ Designmatrix generator
 This function is used to create the designmatrices needed in \code{RobPer} to fit periodic functions. See \code{RobPer} or Thieler, Fried and Rathjens (2013) for Details.
 }
 \usage{
-Xgen(tt, n, s, pp, design, steps)
+Xgen(tt, n, s, pp, design, steps = 10)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -42,13 +42,12 @@ Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calcu
 
 }
 \author{
-Anita M. Thieler, Jonathan Rathjens
+Anita M. Thieler and Jonathan Rathjens
 }
 \note{
 A former version of this function is used in Thieler et al. (2013).
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 Applied in \code{\link{RobPer}}, see \code{\link{FastTau}} for an example.

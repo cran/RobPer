@@ -1,6 +1,6 @@
 \name{sampler}
 \alias{sampler}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Generator for irregularly sampled observation times 
 }

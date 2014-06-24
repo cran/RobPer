@@ -1,6 +1,6 @@
 \name{signalgen}
 \alias{signalgen}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Generator for periodic signal in a light curve
 }

@@ -1,0 +1,89 @@
+
+\bgroup
+
+\tabcolsep0mm
+
+\setlength{\zelleI}{1.7cm}
+\setlength{\zelleZ}{3.1cm}
+\setlength{\zelleE}{3cm}
+\setlength{\zelleA}{3.2cm}
+\setlength{\zelleS}{3.3cm}
+\setlength{\zelleG}{2.4cm}
+
+
+\setlength{\zelleIbisE}{7.8cm}
+\setlength{\zelleIbisS}{14.3cm}
+\setlength{\zelleZbisS}{12.6cm}
+\setlength{\zelleZbisG}{15cm}
+\setlength{\zelleEbisA}{6.2cm}
+\setlength{\zelleEbisS}{9.5cm}
+\setlength{\zelleEbisG}{11.9cm}
+\setlength{\zelleAbisS}{6.5cm}
+\setlength{\zelleAbisG}{8.9cm}
+\setlength{\zelleSbisG}{5.7cm}
+
+
+\begin{table}[t]
+\makebox[\linewidth]{
+\vline
+\mysize
+\begin{tabular}{|C{\zelleI}|C{\zelleZ}|C{\zelleE}|C{\zelleA}|C{\zelleS}|C{\zelleG}|}
+\hline
+\multicolumn{6}{|c|}{\rule[-3mm]{0pt}{24pt}\BwEO}\\
+\hline
+\multicolumn{6}{|c|}{\DwG}\\[-1em]
+\multicolumn{5}{|c}{\diagbox[height=1cm, width=\zelleIbisS]}&\multicolumn{1}{c|}{\diagbox[height=1cm,dir=NE, width=\zelleG]}\\
+\code{"L2"}&\code{"L1"}&\code{"LTS"}&\code{"bisquare"}&\code{"huber"}&\code{"S"} $\vee$ \code{"tau"}\\
+\hline
+\BwZ&\BwEF&\BwEB&\BwEI&\BwEQ&\BwEZ\\
+\hline
+\multicolumn{6}{|c|}{\DwI}\\[-1em]
+\multicolumn{3}{|c}{\diagbox[height=1cm,width=\zelleIbisE]}&\multicolumn{3}{c|}{\diagbox[height=1cm,dir=NE, width=\zelleAbisG]}\\
+\multicolumn{3}{|c|}{\code{FALSE}}&\multicolumn{3}{c|}{\code{TRUE}}\\
+\hline
+\multicolumn{3}{|c|}{\BwE}&\multicolumn{3}{c|}{\BwA}\\
+\hline
+\multicolumn{6}{|c|}{\DwZO}\\[-1em]
+\multicolumn{3}{|c}{\diagbox[height=1cm, width=\zelleIbisE]}&\multicolumn{3}{c|}{\diagbox[height=1cm,dir=NE, width=\zelleAbisG]}\\
+\code{"huber"} $\vee$ \code{"bisquare"} & \code{"L2"}$\vee$ \code{"L1"}& \code{"S"}$\vee$ \code{"tau"}&\multicolumn{3}{c|}{\code{"LTS"}}\\
+\hline
+&\multirow{2}{\zelleZ}{\BwG}&\multirow{2}{\zelleE}{\BwSS}&\multicolumn{3}{c|}{\DwIB}\\[-0.5em]
+&&&\multicolumn{2}{|c}{\diagbox[height=0.5cm,width=\zelleAbisS]}&\multicolumn{1}{c|}{\diagbox[height=0.5cm,dir=NE, width=\zelleG]}\\
+&&&\multicolumn{2}{|c|}{\code{FALSE}}&\code{TRUE}\\
+\cline{4-6}
+&&&\multicolumn{2}{|c|}{\BwSE}&\\
+\cline{4-5}
+&& & \multicolumn{2}{|c|}{}&\\
+&& & \multicolumn{2}{|c|}{\BwSZ}&\BwSA\\
+\hline
+\multicolumn{6}{|c|}{\DwQ}\\[-1em]
+\multicolumn{3}{|c}{\diagbox[height=1cm,width=\zelleIbisE]}&\multicolumn{3}{c|}{\diagbox[height=1cm,dir=NE, width=\zelleAbisG]}\\
+\multicolumn{3}{|c|}{\code{FALSE}}&\multicolumn{3}{c|}{\code{TRUE}}\\
+\hline
+\multicolumn{3}{|c|}{\BwAI}&\multicolumn{3}{c|}{\BwAO}\\
+\hline
+\multicolumn{6}{|c|}{\rule[-3mm]{0pt}{22pt}\BwS}\\
+\cline{2-6}
+\multicolumn{1}{|c|}{}&\multicolumn{5}{c|}{\phantom{$\displaystyle \sum_{i}^n$} \fbox{\code{singleFUN}}}\\
+\hline
+\multicolumn{6}{|c|}{\DwII}\\[-1em]
+\multicolumn{3}{|c}{\diagbox[height=1cm,width=\zelleIbisE]}&\multicolumn{3}{c|}{\diagbox[height=1cm,dir=NE, width=\zelleAbisG]}\\
+\multicolumn{3}{|c|}{\code{FALSE}}&\multicolumn{3}{c|}{\code{TRUE}}\\
+\hline
+\multicolumn{3}{|c|}{}&\multicolumn{3}{c|}{\BwAZ}\\
+\cline{4-6}
+\multicolumn{3}{|c|}{}&\multicolumn{3}{c|}{\rule[-3mm]{0pt}{22pt} \BwS}\\
+\cline{5-6}
+\multicolumn{3}{|c|}{}&\multicolumn{1}{c|}{} &\multicolumn{2}{c|}{\phantom{$\displaystyle \sum_{i}^n$} \fbox{\code{singleFUN}}}\\
+\cline{4-6}
+\multicolumn{3}{|c|}{}&\multicolumn{3}{c|}{\BwAE}\\
+\hline
+\multicolumn{6}{|c|}{\rule[-3mm]{0pt}{22pt}\BwZE}\\
+\hline
+\end{tabular}
+}
+\captionof{figure}{Structogram of \protect\code{RobPer}. The block  \protect\code{singleFUN} is displayed in detail in Figure~\ref{app:fig:singlefun}.}\label{app:fig:robper}
+\end{table}
+
+\egroup
+

@@ -1,6 +1,6 @@
 \name{lc_noise}
 \alias{lc_noise}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Noise and measurement accuracy generator for light curves
 }
@@ -12,7 +12,7 @@ See \code{\link{RobPer-package}} for more information about light curves.
 \usage{
 lc_noise(tt, sig, SNR, redpart, alpha = 1.5)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{tt}{
 numeric vector: Observation times given.
@@ -51,8 +51,6 @@ Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calcu
 Anita M. Thieler and Jonathan Rathjens
 }
 
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 Applied in \code{\link{tsgen}} (see there for an example), applies \code{\link{TK95_uneq}}.
