@@ -49,20 +49,20 @@ i <- 1
 
 for (reg in c("L2", "L1", "huber", "bisquare", "S", "tau")) {
     set.seed(seeds[i])
-    print(RobPer(ts, weighting=ww[i], periods=per, regression=reg, model="sine"))
+    print(signif(RobPer(ts, weighting=ww[i], periods=per, regression=reg, model="sine"), 3))
     i <- i+1
 }
 
 set.seed(seeds[i])
-RobPer(ts, weighting=ww[i], periods=per, regression="LTS", model="sine", LTSopt=FALSE)
+signif(RobPer(ts, weighting=ww[i], periods=per, regression="LTS", model="sine", LTSopt=FALSE), 3)
 i <- i+1
 set.seed(seeds[i])
-RobPer(ts, weighting=ww[i], periods=per, regression="LTS", model="sine", LTSopt=TRUE)
+signif(RobPer(ts, weighting=ww[i], periods=per, regression="LTS", model="sine", LTSopt=TRUE), 3)
 i <- i+1
 
 for (mod in c("step", "2step", "fourier(2)", "fourier(3)", "splines")) {
     set.seed(seeds[i])
-    print(RobPer(ts, weighting=ww[i], periods=per, regression="huber", model=mod, steps=5))
+    print(signif(RobPer(ts, weighting=ww[i], periods=per, regression="huber", model=mod, steps=5), 3))
     i <- i+1
 }
 
