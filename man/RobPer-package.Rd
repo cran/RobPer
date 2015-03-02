@@ -6,14 +6,14 @@
 The RobPer-package
 }
 \description{
-Calculates periodograms based on (robustly) fitting periodic functions to light curves and other irregulary observed time series and detects high periodogram bars
+Calculates periodograms based on (robustly) fitting periodic functions to light curves and other irregulary observed time series and detects high periodogram bars.
 }
 \details{
 \tabular{ll}{
 Package: \tab RobPer\cr
 Type: \tab Package\cr
-Version: \tab 1.2\cr
-Date: \tab 2014-08-24\cr
+Version: \tab 1.2.1\cr
+Date: \tab 2015-03-02\cr
 License: \tab GPL-2 | GPL-3 \cr
 }
 Light curves occur in astroparticle physics and are irregularly sampled times series
@@ -39,7 +39,7 @@ The financial support of the DFG (SFB 876 "Providing Information by Resource-Con
 \author{
 Anita M. Thieler, Jonathan Rathjens and Roland Fried, with contributions from Brenton R. Clarke (see  \code{\link{betaCvMfit}}),  Matias Salibian-Barrera, Gert Willems and Victor Yohai (see \code{\link{FastS}} and \code{\link{FastTau}}) and Uwe Ligges (see \code{\link{TK95}}).
 
-Maintainer: Anita M. Thieler <anita.thieler@tu-dortmund.de>
+Maintainer: Jonathan Rathjens <jonathan.rathjens@tu-dortmund.de>
 }
 \references{
 Clarke, B. R., McKinnon, P. L. and Riley, G. (2012): A Fast Robust Method for Fitting Gamma Distributions. Statistical Papers, 53 (4), 1001-1014

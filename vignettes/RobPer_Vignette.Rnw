@@ -275,7 +275,7 @@ Return value & \\
 Possibly warnings                       & \\
  \hline
 \end{tabularx}
-\caption{Arguments and return values of the function \protect\code{RobPer}. \{\protect\code{T}, \protect\code{F}\} means \{\protect\code{TRUE}, \protect\code{FALSE}\}.}\label{tab:robperinput}
+\caption{Arguments and return values of the function \code{RobPer}. \{\code{T}, \code{F}\} means \{\code{TRUE}, \code{FALSE}\}.}\label{tab:robperinput}
 %\egroup
 \end{table}
 
@@ -289,7 +289,7 @@ In addition to least squares regression, \code{RobPer} offers a selection of rob
 \end{align}
 with respect to the unknown parameter value $\beta \in \mathds R^m$, where $X \in \mathds R^{n\times m}$ is the design matrix
 containing the known components of $g\left(\frac t p\right)$ at the measurement times $t_1,\ldots,t_n$ with $p$ being a trial period and $y$ the vector of observations $y_1,\ldots,y_n$. In the simple example mentioned above, the $i$-th row of $X$ has the elements $\sin(2\pi t_i/p)$ and $\cos(2\pi t_i/p)$.
-The function $\zeta:\mathds R^n \rightarrow [0,\infty[$ is chosen according to the regression method, e.g. $\zeta(r)=\sum_{i=1}^n r_i^2$ for least squares regression. Using the same regression technique, the location $\mu$ of the observations $y_1,\ldots,y_n$ can be estimated minimizing
+The function $\zeta:\mathds R^n \rightarrow [0,\infty[$ is chosen according to the regression method, e.g., $\zeta(r)=\sum_{i=1}^n r_i^2$ for least squares regression. Using the same regression technique, the location $\mu$ of the observations $y_1,\ldots,y_n$ can be estimated minimizing
 \begin{align}
 \SY = \zeta\left(y-\mathfrak{i}\mu \right) \label{eq:SY}
 \end{align}
@@ -302,13 +302,13 @@ y & = X\beta + \epsilon \qquad \text{(full model)},\\
 y &= \mathfrak i \mu + \epsilon \qquad \text{(location model)}\\
 \mbox{with }&\epsilon \in \mathds R^n, \epsilon_i\underset{\text{i.i.d}}{\sim} \mathcal N(0,\sigma^2)
 \end{align}
- are replaced by $\widetilde y_i = y_i/s_i$, $\widetilde X_{ij}= X_{ij}/s_i$ and $\widetilde {\protect \mathfrak i_i} =  \mathfrak i_i /s_i = \mathds 1_n/s_i$, respectively.
+ are replaced by $\widetilde y_i = y_i/s_i$, $\widetilde X_{ij}= X_{ij}/s_i$ and $\widetilde { \mathfrak i_i} =  \mathfrak i_i /s_i = \mathds 1_n/s_i$, respectively.
 %\begin{align}
 %\widetilde y & = \widetilde X\beta + \widetilde \epsilon,\\
-%\widetilde y &=  \widetilde {\protect \mathfrak i} \mu + \epsilon,\\
+%\widetilde y &=  \widetilde { \mathfrak i} \mu + \epsilon,\\
 %\text{with }& \widetilde y_i = y_i/s_i,\\
 %           &  \widetilde X_{ij}= X_{ij}/s_i,\\
-%           & \widetilde {\protect \mathfrak i_i} =  \mathfrak i_i /s_i = \mathds 1_n/s_i.
+%           & \widetilde { \mathfrak i_i} =  \mathfrak i_i /s_i = \mathds 1_n/s_i.
 %\end{align}
 In the following, we will focus on the case of unweighted regression and only point out the handling of weighted regression, when both procedures differ.
 
@@ -349,7 +349,7 @@ Model & Regression technique& Publication\\ &&\qquad(Name of the method)\\
                      &\code{L2}, \code{L1}, \code{huber},\code{bisquare} & \underline{\citet{thieler2013periodicity}}\\[\abstand]
 \hline
 \end{tabularx}
-\caption{Published periodogram methods that rely on fitting a periodic model $g$ to a light curve using a regression technique. Models (see Section~\ref{sec:model}): periodic step functions and pairwise overlapping step functions (\protect\code{step} and \protect\code{2step}), the sine function (\protect\code{sine}), Fourier series of second and third degree and periodic spline functions (\protect\code{fourier(2)}, \protect\code{fourier(3)} and \protect\code{splines}). Regression techniques: See Table~\ref{tab:regressiontechniques} for labels. The underlined methods can take into account measurement accuracies using weighted regression. The periodogram bars of methods marked by * do not base on SE or SY, but on the parameter vector of the function fitted (e.g., squared amplitude).}\label{tab:modellregschema}
+\caption{Published periodogram methods that rely on fitting a periodic model $g$ to a light curve using a regression technique. Models (see Section~\ref{sec:model}): periodic step functions and pairwise overlapping step functions (\code{step} and \code{2step}), the sine function (\code{sine}), Fourier series of second and third degree and periodic spline functions (\code{fourier(2)}, \code{fourier(3)} and \code{splines}). Regression techniques: See Table~\ref{tab:regressiontechniques} for labels. The underlined methods can take into account measurement accuracies using weighted regression. The periodogram bars of methods marked by * do not base on SE or SY, but on the parameter vector of the function fitted (e.g., squared amplitude).}\label{tab:modellregschema}
 \end{table}
 
 
@@ -400,7 +400,7 @@ S-regression              & \code{"S"}        & slightly modified code from \cit
 $\tau$-regression                & \code{"tau"}      & slightly modified code from \citet{salibian2008fast}\\
 \hline
 \end{tabularx}
-\caption{Regression techniques implemented in \protect\code{RobPer} and \proglang{R}~functions used to perform the regression technique. For more details see Section~\ref{sec:regression}.}\label{tab:regressiontechniques}
+\caption{Regression techniques implemented in \code{RobPer} and \proglang{R}~functions used to perform the regression technique. For more details see Section~\ref{sec:regression}.}\label{tab:regressiontechniques}
 \end{table}
 
 
@@ -415,23 +415,22 @@ A further problem we observed is that \code{ltsReg} sometimes aborts the fit. Ho
 
 In case of M-regression, a periodogram bar, i.e., the coefficient of determination $R^2=1-\frac{\SE}{\SY}$ is calculated from the values
 \begin{align}
-\SE &= \underset{\beta}{\min} \sum_{i=1}^n \rho\left(\frac{y_i-x_i^\transp \beta}{\widehat\sigma_\beta}\right)\label{eq:SE_M}
+\SE &= \underset{\beta}{\min} \sum_{i=1}^n \rho\left(\frac{y_i-x_i^\transp \beta}{\widehat\sigma}\right)\label{eq:SE_M}
 \end{align}
  and
 \begin{align}
- \SY &= \underset{\mu}{\min}   \sum_{i=1}^n \rho\left(\frac{y_i-\mathfrak{i}_i\mu}{\widehat\sigma_\mu}\right),\label{eq:SY_M}
+ \SY &= \underset{\mu}{\min}   \sum_{i=1}^n \rho\left(\frac{y_i-\mathfrak{i}_i\mu}{\widehat\sigma}\right),\label{eq:SY_M}
  \end{align}
- where $\widehat\sigma_\beta$ and $\widehat\sigma_\mu$ are estimates of the error scale $\sigma$ in the regression and in the location model with only an intercept, respectively.
- As explained above, they represent the minimization criteria of the fits of the chosen periodic fluctuation ($\SE$ in Equation~\ref{eq:SE}) and of a location estimate (SY in Equation~\ref{eq:SY}), respectively. The function $\rho$ is a distance measure. The vector $\mathfrak{i}$ consists of ones in case of unweighted regression. As mentioned before, in case of weighted regression, $y_i$, $\mathfrak{i}_i$ and the rows $x_i$ of the design matrix are standardized by the measurement accuracy $s_i$ (see Figure~\ref{app:fig:robper} in Appendix~\ref{sec:app:struktogramme}).
+ where $\widehat\sigma$ is an estimate of the error scale $\sigma$ in the regression model. As explained above, Equation~\ref{eq:SE_M} and Equation~\ref{eq:SY_M} represent the minimization criteria of the fits of the chosen periodic fluctuation ($\SE$ in Equation~\ref{eq:SE}) and of a location estimate (SY in Equation~\ref{eq:SY}), respectively. The function $\rho$ is a distance measure. The vector $\mathfrak{i}$ consists of ones in case of unweighted regression. As mentioned before, in case of weighted regression, $y_i$, $\mathfrak{i}_i$ and the rows $x_i$ of the design matrix are standardized by the measurement accuracy $s_i$ (see Figure~\ref{app:fig:robper} in Appendix~\ref{sec:app:struktogramme}).
 
-The value $\widehat \sigma_\beta$ is obtained in an initial estimation of the periodic fluctuation, calculating a scale estimate of the fitted residuals. \citet[S.~171]{maronna2006robust} recommend setting $\widehat \sigma_\mu$ to $\widehat \sigma_\beta$. In our context this means that $\SY$ depends on the trial period and cannot be calculated globally. On the other hand this ensures that the full model $Y=X\beta+\epsilon$, $\epsilon\sim\mathcal N(0,\sigma_\beta^2)$ is a generalization of the intercept model $Y=\mathfrak{i}\mu+\epsilon$, $\epsilon\sim\mathcal N(0,\sigma_\mu^2)$ and thus $\SE \leq \SY$ and $R^2\geq 0$.
+The value $\widehat \sigma$ is obtained in an initial estimation of the periodic fluctuation, calculating a scale estimate of the fitted residuals. In principle, one could use a different estimate of $\sigma$ calculated from fitting only an intercept in Equation~\ref{eq:SY_M}, but \citet[p.~171]{maronna2006robust} recommend using the scale estimate from the (larger) regression model. In our context this means that $\SY$ depends on the trial period and cannot be calculated globally. On the other hand this ensures that the regression model $Y=X\beta+\epsilon$, $\epsilon\sim\mathcal N(0,\sigma^2)$ is a generalization of the intercept model $Y=\mathfrak{i}\mu+\epsilon$, $\epsilon\sim\mathcal N(0,\sigma^2)$ and thus $\SE \leq \SY$ and $R^2\geq 0$.
 
 So for this regression technique, an implementation is needed where the scale estimate can be fixed in advance.
 For M-regression using the biweight function, the function \code{lmrob..M..fit}, package \pkg{robustbase} from \citet{rousseeuw2012robustbase} is used. This \proglang{R}~function includes Huber M-regression only as a limiting case of Hampel M-regression with all but one of its tuning constants set to very large values. In other \proglang{R} functions known to us for M-regression (\code{rlm}, package \pkg{MASS} from \citealt{venables2002MASS}, \code{iwlsm}, package \pkg{RSiena} from \citealt{ripley2012RSiena} and \code{robustregBS} and \code{robustRegH}, package  \pkg{robustreg} from \citealt{johnson2011robustreg}), the scale estimate cannot be fixed in advance. Hence M-regression using the Huber function is newly implemented for \pkg{RobPer}. Like the functions specified before, this implementation is based on an iteratively reweighted least squares (IRWLS) approach (see \citealt[pp.~104--105]{maronna2006robust}), and meets our special requirements. For M-regression using the biweight function, the implementation makes also use of the function \code{genoud}, package \pkg{rgenoud} (see previous paragraph) to overcome possible problems with local optima.
 
-As noted above, weighted regression scales observed values and design matrices by the measurement accuracies. The variance of the error is expected to be about one then. Hence it can be reasonable to set $\widehat \sigma_\beta$ to one. This can be done in \code{RobPer} setting the argument \code{var1} to \code{TRUE}, as is recommendable in our experience in case of weighted M-regression.
+As noted above, weighted regression scales observed values and design matrices by the measurement accuracies. The variance of the error is expected to be about one then. Hence it can be reasonable to set $\widehat \sigma$ to one. This can be done in \code{RobPer} setting the argument \code{var1} to \code{TRUE}, as is recommendable in our experience in case of weighted M-regression.
 
-To calculate a periodogram bar using M-regression with IRWLS, three initial estimates are needed: A scale estimate $\widehat \sigma_\beta$ (if not set to one) and initial location estimates $\widehat \beta^{(0)}$ and $\widehat \mu^{(0)}$ for $\beta$ and $\mu$. The initial estimates should be obtained using robust techniques. As proposed by \citet[p.~105]{maronna2006robust} we use the median (weighted if the $s_i$ shall be taken into account) to initially estimate $\mu$. For $\beta$, LTS-regression (see previous paragraph) is used. It has a high breakdown point and is appropriate in situations with many observations not agreeing with the best fit. This situation will often occur in periodogram calculation, as many trial periods and thus many wrong models are fitted to the light curve. The scale estimate $\widehat \sigma_\beta$ is calculated as the (weighted) median of the residuals of the LTS-fit.
+To calculate a periodogram bar using M-regression with IRWLS, three initial estimates are needed: A scale estimate $\widehat \sigma$ (if not set to one) and initial location estimates $\widehat \beta^{(0)}$ and $\widehat \mu^{(0)}$ for $\beta$ and $\mu$. The initial estimates should be obtained using robust techniques. As proposed by \citet[p.~105]{maronna2006robust} we use the median (weighted if the $s_i$ shall be taken into account) to initially estimate $\mu$. For $\beta$, LTS-regression (see previous paragraph) is used. It has a high breakdown point and is appropriate in situations with many observations not agreeing with the best fit. This situation will often occur in periodogram calculation, as many trial periods and thus many wrong models are fitted to the light curve. The scale estimate $\widehat \sigma$ is calculated as the (weighted) median of the residuals of the LTS-fit.
 
 
 \subsubsection{S-regression}\label{sec:Sregression}
@@ -454,7 +453,7 @@ Further changes in \code{FastS} are:
 \item If no subsample can be found in 100 trials, \code{FastS} returns \code{NA}. \code{RobPer} then releases a warning, but can calculate further periodogram bars for other trial periods.
 \item The internal functions \code{loss.S}, \code{re.s}, \code{f.w}, \code{scale1}, \code{our.solve} and \code{rho} are now defined outside \code{FastS}. Otherwise \proglang{R} would have to redefine them for each periodogram bar.
 \item The subfunction \code{norm} is replaced by the function \code{norm(..., "2")} from the package \pkg{base} \citep{base}.
-\item The labels of the output are changed for better interpretation.
+\item The labels of the return values are changed for better interpretation.
 \end{enumerate}
 
 
@@ -464,14 +463,14 @@ In case of \code{regression = "tau"}, $\tau$-regression is used to fit the perio
 
 The \proglang{R}~function \code{FastTau} used in \pkg{RobPer} is a slightly modified version of the \proglang{R}-code published in \citet{salibian2008fast} with similar changes as in \code{FastS} compared to \code{fast.s} (see previous paragraph). The changes are:
 \begin{enumerate}
-\item A candidate for $\beta_\mu$, see equation~\eqref{eq:betagamma}, is allowed.
+\item A candidate for $\beta_\mu$, see Equation~\ref{eq:betagamma}, is allowed.
 \item Arguments \code{N}, \code{kk} , \code{tt}, \code{rr} and \code{approximate} are combined to a list \code{taucontrol}, which is also argument for \code{RobPer}.
 \item Subsamples in general position are found as in \code{FastS} (change~\ref{item:gp} in the previous paragraph).
 \item If no subsample can be found, \code{FastTau} returns \code{NA} instead of a break using the \code{stop}~function. This allows \code{RobPer} to release a warning, while calculating further periodogram bars for other trial periods.
 \item A block of code used several times to check new regression parameter candidates for providing the best optimization value so far has been modularized into the subfunction \code{checkbest}.
 \item Due to rounding errors, it may happen in the IRWLS algorithm that negative values close to zero occur, although they have to be non-negative by theory. This is avoided by setting such values to zero.
 \item The subfunction \code{randomset} is replaced by the \proglang{R}~function \code{sample} from the \pkg{base}~package as both functions fulfill the same task and \code{sample} is faster.
-\item The labels of the output are changed for better interpretation.
+\item The labels of the return values are changed for better interpretation.
 \end{enumerate}
 
 
@@ -610,7 +609,7 @@ legend("topright", col=c("black", "grey50","black", "black"),lwd=2, lty=c(1,1,3,
     legend=c("True", "CvM", "Robust moments", "Moments"))
 box()
 @
-\caption{Grey-scale-version of the example for \protect\code{betaCvMfit} given in the \pkg{RobPer} manual: Histogram of 45 $\mathcal B(4,15)$-distributed observations and 5 outliers uniformly distributed between 0.8 and 1. The black solid line shows the $\mathcal B(4,15)$-distribution, the other curves show different fits using \protect\code{betaCvMfit} (in case of \protect\code{CvM = TRUE}, the different settings for \protect\code{rob} lead to the same result).}\label{fig:betaCvMfit}
+\caption{Grey-scale-version of the example for \code{betaCvMfit} given in the \pkg{RobPer} manual: Histogram of 45 $\mathcal B(4,15)$-distributed observations and 5 outliers uniformly distributed between 0.8 and 1. The black solid line shows the $\mathcal B(4,15)$-distribution, the other curves show different fits using \code{betaCvMfit} (in case of \code{CvM = TRUE}, the different settings for \code{rob} lead to the same result).}\label{fig:betaCvMfit}
 \end{center}
 \end{figure}
 }
@@ -648,20 +647,20 @@ Argument & Subfunction & Comment\\
 \colorbox{hellgrau}{\code{ncycles} $ \in \mathds N$} & \code{sampler}  & Number $n_s$ of sampling cycles. \\
 \colorbox{hellgrau}{\code{npoints} $ \in \mathds N$}& \code{sampler}  & Sample size $n$.\\
 \colorbox{hellgrau}{\code{ttype}    }             & \code{sampler}  & Distribution $\mathcal D(p_s)$ of the unsorted observation times. Options are: \code{"equi"} (equidistant sampling), \code{"unif"} (uniform sampling), \code{"sine"} (sine-shaped density, see Section~\ref{sec:sampler}) and \code{"trian"} (triangular density, see Section~\ref{sec:sampler}).\\
-\code{tt} $ \in\mathds R^n$                        & \code{signalgen}, \code{lc}\texttt{\textunderscore}\code{noise}, \code{disturber}& Observation times $t_1,\ldots,t_n$, e.g., output from \code{sampler}.\\
+\code{tt} $ \in\mathds R^n$                        & \code{signalgen}, \code{lc}\texttt{\textunderscore}\code{noise}, \code{disturber}& Observation times $t_1,\ldots,t_n$, e.g., return value from \code{sampler}.\\
 \colorbox{hellgrau}{\code{pf} $ \in\mathds R_{>0}$} & \code{signalgen}& Fluctuation period $p_f$. Default 1. \\
 \colorbox{hellgrau}{\code{ytype}          }       & \code{signalgen}& Type of periodic fluctuation $f$. Options:  \code{"const"} (constant),  \code{"sine"} (sine), \code{"trian"} (triangular function) and \code{"peak"} (peak function).\\
-\code{sig} $ \in\mathds R^n$                       & \code{lc}\texttt{\textunderscore}\code{noise} & Values $y_{f;1}, \ldots, y_{f;n}$ of the periodic fluctuation, e.g., output from \code{signalgen}.\\
+\code{sig} $ \in\mathds R^n$                       & \code{lc}\texttt{\textunderscore}\code{noise} & Values $y_{f;1}, \ldots, y_{f;n}$ of the periodic fluctuation, e.g., return value from \code{signalgen}.\\
 \colorbox{hellgrau}{\code{SNR} $ \in \mathds R_{>0}$ } & \code{lc}\texttt{\textunderscore}\code{noise}& Relation $\var(y_f) / \var(y_w+y_r)$.\\
 \colorbox{hellgrau}{\code{redpart} $ \in[0,1]$} & \code{lc}\texttt{\textunderscore}\code{noise}& Fraction $\var(y_r)/(\var(y_w)+\var(y_r))$ of noise not related to measurement accuracies.\\
 \colorbox{hellgrau}{\code{alpha}      }       & \code{lc}\texttt{\textunderscore}\code{noise}     & Power law coefficient of the noise component $y_r$. Set to zero for $y_{r;1},\ldots, y_{r;n} \underset{i.i.d.}\sim \mathcal N(0,\sigma^2)$.\\
-\code{y} $ \in\mathds R^n$                    &\code{disturber}      & Observed values $y_{1}, \ldots, y_{n}$, e.g., output from \code{lc}\texttt{\textunderscore}\code{noise}.\\
-\code{s} $ \in \mathds R_{>0}^n$&\code{disturber} & Measurement accuracies $s_{1}, \ldots, s_{n}$, e.g., output from \code{lc}\texttt{\textunderscore}\code{noise}.\\
+\code{y} $ \in\mathds R^n$                    &\code{disturber}      & Observed values $y_{1}, \ldots, y_{n}$, e.g., return value from \code{lc}\texttt{\textunderscore}\code{noise}.\\
+\code{s} $ \in \mathds R_{>0}^n$&\code{disturber} & Measurement accuracies $s_{1}, \ldots, s_{n}$, e.g., return value from \code{lc}\texttt{\textunderscore}\code{noise}.\\
 \colorbox{hellgrau}{\code{s.outlier.fraction} $ \in [0,1]$ } &\code{disturber}& Fraction of measurement accuracies to be replaced by outliers.\\
 \colorbox{hellgrau}{\code{interval} $\in$ \{\code{TRUE}, \code{FALSE}\} } &\code{disturber}& If \code{TRUE}, the $y_i$ belonging to a random time interval are disturbed.\\
 \hline
 \end{tabularx}
-\caption{Arguments for the subfunctions of \protect\code{tsgen}. See the respective section for more details. Grey-shaded values are also argument for \protect\code{tsgen}, which passes the values to the respective subfunction. '$\var$' denotes the empirical variance.}\label{tab:inputtsgen}
+\caption{Arguments for the subfunctions of \code{tsgen}. See the respective section for more details. Grey-shaded values are also argument for \code{tsgen}, which passes the values to the respective subfunction. '$\var$' denotes the empirical variance.}\label{tab:inputtsgen}
 \end{table}
 
 
@@ -711,7 +710,7 @@ As the result, \code{signalgen} returns the periodic component $y_{f;1},\ldots,y
 
 \subsection[Add noise and measurement accuracies using lc noise]{Add noise and measurement accuracies using \code{lc\textunderscore{}noise}}\label{sec:lc_noise}
 
-The \proglang{R}~function \code{lc_noise} is used to generate measurement accuracies $s_1,\ldots,s_n$ and add noise to a periodic fluctuation (see Table~\ref{tab:inputtsgen}).  The measurement accuracies are sampled from a gamma$(3,10)$ distribution. This choice is motivated by real data from \citet{tluczykont2010long}. As shown in Equation~\eqref{eq:heterorausch}, the noise component $y_w=(y_{w;1},\ldots,y_{w;n})^\transp$ is a realization of $Y_w$ with $Y_{w;i} \sim \mathcal N(0,s_i^2)$.
+The \proglang{R}~function \code{lc_noise} is used to generate measurement accuracies $s_1,\ldots,s_n$ and add noise to a periodic fluctuation (see Table~\ref{tab:inputtsgen}).  The measurement accuracies are sampled from a gamma$(3,10)$ distribution. This choice is motivated by real data from \citet{tluczykont2010long}. As shown in Equation~\ref{eq:heterorausch}, the noise component $y_w=(y_{w;1},\ldots,y_{w;n})^\transp$ is a realization of $Y_w$ with $Y_{w;i} \sim \mathcal N(0,s_i^2)$.
 
 A second noise component $y_r$ does not depend on the $s_i$. It is generated as red noise, i.e., following a power law with power law index $\alpha$. For $\alpha=0$ we get white noise. Flicker noise (pink noise) is generated using $\alpha=1$ and brown noise using $\alpha=2$. The power law noise is generated using subfunctions \code{TK95_uneq} and \code{TK95}. The latter generates an equidistant time series of power law noise according to \citet{timmer95}. For irregular observation times, a noise series resulting from \code{TK95} is used and an unequally sampled noise series is generated following \citet{uttley02}.
 
@@ -1373,12 +1372,12 @@ Argument & Symbol & Explanations\\
 \code{scale}\texttt{\textunderscore} $\in \mathds R_{>0}$& $\sigma$& {(Estimate of) Standard deviation}\\
 \code{tol} $\in \mathds R_{>0}$ &\code{tol}& {Precision for convergence}\\
 \hline
-Output&&\\
+Return value &&\\
 \hline
 \code{tempIRWLS}\texttt{\$}\code{coeff} & $\widehat b$ & Fitted vector of parameters\\
 \hline
 \end{tabularx}
-\caption{Arguments and return values of the function \protect\code{IRWLS}.}\label{app:tab:irwlsinput}
+\caption{Arguments and return value of the function \code{IRWLS}.}\label{app:tab:irwlsinput}
 \end{table}
 
 
