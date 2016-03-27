@@ -1,4 +1,4 @@
-\encoding{utf8}
+\encoding{latin1}
 \name{Mrk421}
 \docType{data}
 \alias{Mrk421}
@@ -55,13 +55,13 @@ Donnarumma, I., Vittorini, V., Vercellone, S., et al. (2009): The June 2008 Flar
 
 Kerrick, A. D., Akerlof, C. W., Biller, S. D., et al. (1995): Outburst of TeV photons from Markarian 421. The Astrophysical Journal, 438, L59
 
-Kestel, M. (2003): TeV gamma-Flux and Spectrum of Markarian 421 in 1999/2000 with Hegra CT1 using refined Analysis Methods. Ph.D. Thesis, Technische \enc{UniversitÃ¤t}{Universitaet} \enc{MÃ¼nchen}{Muenchen}
+Kestel, M. (2003): TeV gamma-Flux and Spectrum of Markarian 421 in 1999/2000 with Hegra CT1 using refined Analysis Methods. Ph.D. Thesis, Technische \enc{Universität}{Universitaet} \enc{München}{Muenchen}
 
 Krawczynski, H., Sambruna, R., Kohnle, A., et al. (2001): Simultaneous X-Ray and TeV Gamma-Ray Observation of the TeV Blazar Markarian 421 during 2000 February and May. The Astrophysical Journal, 559(1), 187
 
 Maraschi, L., Fossati, G., Tavecchio, F., et al. (1999): Simultaneous X-Ray and TeV Observations of a Rapid Flare from Markarian 421. The Astrophysical Journal, 526, L81
 
-Piron, F. (2000): \enc{Ã‰tude}{Etude} des \enc{propriÃ©tÃ©s}{proprietes} spectrales et de la \enc{variabilitÃ©}{variabilite} de l'\enc{Ã©mission}{emission} Gamma \enc{supÃ©rieure}{superieure} \enc{Ã }{a} 250 GeV des blazars \enc{observÃ©s}{observes} entre Octobre 1996 et \enc{FÃ©vrier}{Fevrier} 2000 par le \enc{tÃ©lescope}{telescope} \enc{Ã }{a} effet Tcherenkov \enc{athmosphÃ©rique}{athmospherique} C.A.T. Ph.D. Thesis, \enc{UniversitÃ©}{Universite} de Paris-Sud
+Piron, F. (2000): \enc{Étude}{Etude} des \enc{propriétés}{proprietes} spectrales et de la \enc{variabilité}{variabilite} de l'\enc{émission}{emission} Gamma \enc{supérieure}{superieure} \enc{à}{a} 250 GeV des blazars \enc{observés}{observes} entre Octobre 1996 et \enc{Février}{Fevrier} 2000 par le \enc{télescope}{telescope} \enc{à}{a} effet Tcherenkov \enc{athmosphérique}{athmospherique} C.A.T. Ph.D. Thesis, \enc{Université}{Universite} de Paris-Sud
 
 Piron, F., Djannati-Atai, A., Punch, M., et al. (2001): Temporal and spectral gamma-ray properties of Mkn 421 above 250 GeV from CAT observations between 1996 and 2000. Astronomy & Astrophysics, 374(3), 895
 

@@ -1,4 +1,4 @@
-\encoding{utf8}
+\encoding{latin1}
 \name{betaCvMfit}
 \alias{betaCvMfit}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -6,7 +6,7 @@
   Robust fit of a Beta distribution using CvM distance minimization
 }
 \description{
-  Robustly fits a Beta distribution to \code{data} using \enc{CramÃ©r}{Cramer}-von-Mises (CvM) distance minimization.
+  Robustly fits a Beta distribution to \code{data} using \enc{Cramér}{Cramer}-von-Mises (CvM) distance minimization.
 }
 \usage{
 betaCvMfit(data, CvM = TRUE, rob = TRUE)
@@ -17,14 +17,14 @@ betaCvMfit(data, CvM = TRUE, rob = TRUE)
      numeric vector: The sample, a Beta distribution is fitted to. 
 }
   \item{CvM}{
-     logical: If \code{FALSE} the \enc{CramÃ©r}{Cramer}-von-Mises-distance is not minimized, but only moment estimates for the parameters of the Beta distribution are returned (see Details).
+     logical: If \code{FALSE} the \enc{Cramér}{Cramer}-von-Mises-distance is not minimized, but only moment estimates for the parameters of the Beta distribution are returned (see Details).
 }
   \item{rob}{
      logical: If \code{TRUE}, mean and standard deviation are replaced by median and MAD when calculating moment estimates for the parameters of the Beta distribution (see Details). 
 }
 }
 \details{
-  \code{betaCvMfit} fits a Beta distribution to \code{data} by minimizing the \enc{CramÃ©r}{Cramer}-von-Mises distance.
+  \code{betaCvMfit} fits a Beta distribution to \code{data} by minimizing the \enc{Cramér}{Cramer}-von-Mises distance.
    Moment estimates of the parameters of the Beta distribution, clipped to positive values, are used as 
    starting values for the optimization process. They are calculated using
    \deqn{\hat a=-\frac{\bar x \cdot (-\bar x + \bar x^2 + \hat s^2)}{\hat s^2},}{a_est = - mean(x)*(-mean(x)+mean(x)^2+var(x))/var(x)}
@@ -33,7 +33,7 @@ betaCvMfit(data, CvM = TRUE, rob = TRUE)
    These clipped moment estimates can be returned instead
    of CvM-fitted parameters setting \code{CvM = FALSE}.
    
-   The \enc{CramÃ©r}{Cramer}-von-Mises distance is defined as (see Clarke, McKinnon and Riley 2012)   
+   The \enc{Cramér}{Cramer}-von-Mises distance is defined as (see Clarke, McKinnon and Riley 2012)   
   \deqn{\frac 1n \sum_{i=1}^n \left(F(u_{(i)}) - 
   \frac{i-0.5}{n}\right)^2+ \frac{1}{12n^2},}{1/n*\sum(F(u[(i)])-(i-0.5)/n)^2+1/(12n^2)} where 
   \eqn{u_{(1)},\ldots,u_{(n)}}{u[(1)], \ldots, u[(n)]} is the ordered sample and \eqn{F} the 
@@ -47,8 +47,8 @@ numeric vector: Estimates for the Parameters \eqn{a,b}{a,b} of a Beta\eqn{(a,b)}
 Anita M. Thieler, with contributions from Brenton R. Clarke.
 }
 \note{
-Adapted from R-Code from Brenton R. Clarke to fit a Gamma distribution (see Clarke, McKinnon and Riley 2012) using \enc{CramÃ©r}{Cramer}-von-Mises distance minimization. 
-Used in Thieler et al. (2013). See also Thieler, Fried and Rathjens (2013).
+Adapted from R-Code from Brenton R. Clarke to fit a Gamma distribution (see Clarke, McKinnon and Riley 2012) using \enc{Cramér}{Cramer}-von-Mises distance minimization. 
+Used in Thieler et al. (2013). See also Thieler, Fried and Rathjens (2016).
 }
 
 % ~Make other sections like Warning with \section{Warning }{....} ~
@@ -62,7 +62,7 @@ Clarke, B. R., McKinnon, P. L. and Riley, G. (2012): A Fast Robust Method for Fi
 
 Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detection in Irregularly Sampled Light Curves by Robust Regression and Outlier Detection. Statistical Analysis and Data Mining, 6 (1), 73-89
 
-Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Technical Report 2, Collaborative Research Center SFB 876, TU Dortmund University, available at \url{http://sfb876.tu-dortmund.de/PublicPublicationFiles/thieler_etal_2013b.pdf} 
+Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 }
 
 

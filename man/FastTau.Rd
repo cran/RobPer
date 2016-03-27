@@ -32,7 +32,7 @@ It bases on starting with a set of \code{N} parameter candidates,
 locally optimizing them using \code{kk} iterations, 
 then optimizing the \code{tt} best candidates to convergence and finally choosing the best parameter candidate. Since calculation of the objective value is computationally expensive, it is possible to approximate it with \code{rr} iteration steps when choosing \code{approximate=TRUE}. For more details see Salibian-Barrera, Willems and Zamar (2008).
 
-The R-function \code{FastTau} used in \code{RobPer} is a slightly changed version of the R-code published in Salibian-Barrera, Willems and Zamar (2008). It was changed in order to work more efficiently, especially when fitting step functions, and to specify one parameter candidate in advance. For details see Thieler, Fried and Rathjens (2013).
+The R-function \code{FastTau} used in \code{RobPer} is a slightly changed version of the R-code published in Salibian-Barrera, Willems and Zamar (2008). It was changed in order to work more efficiently, especially when fitting step functions, and to specify one parameter candidate in advance. For details see Thieler, Fried and Rathjens (2016).
 }
 \value{
 \item{beta}{numeric vector: Fitted parameter vector.}
@@ -42,7 +42,7 @@ The R-function \code{FastTau} used in \code{RobPer} is a slightly changed versio
 \references{
 Salibian-Barrera, M., Willems, G. and Zamar, R. (2008): The Fast-tau Estimator for Regression. Journal of Computational and Graphical Statistics, 17 (3), 659-682
 
-Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Technical Report 2, Collaborative Research Center SFB 876, TU Dortmund University, available at \url{http://sfb876.tu-dortmund.de/PublicPublicationFiles/thieler_etal_2013b.pdf} 
+Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 
 }
 

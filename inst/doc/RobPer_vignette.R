@@ -1,4 +1,4 @@
-### R code from vignette source 'RobPer_Vignette.Rnw'
+### R code from vignette source 'RobPer_vignette.Rnw'
 
 ###################################################
 ### code chunk number 1: JSS_options_and_package_loading
@@ -247,17 +247,7 @@ box()
 
 
 ###################################################
-### code chunk number 22: Periodogram_plot
-###################################################
-plot(1:50, PP, xlab = "Trial period", ylab = "Periodogram", main = "",
-    type = "l")
-abline(h = crit.val, lwd = 2)
-text(7, PP[7]-0.002,7, pos=4)
-text(14, PP[14]+0.002,14, pos=4)
-
-
-###################################################
-### code chunk number 23: Panel_5a
+### code chunk number 22: Panel_5a
 ###################################################
 par(mar=c(3,3,1,0.7), mgp=c(2,1,0))
 hist(PP, breaks = 20, freq = FALSE, xlim = c(0, 0.08), col = "grey",
@@ -274,9 +264,19 @@ box()
 
 
 ###################################################
-### code chunk number 24: Panel_5b
+### code chunk number 23: Panel_5b
 ###################################################
 par(mar=c(3,3,1,0.1), mgp=c(2,1,0))
+plot(1:50, PP, xlab = "Trial period", ylab = "Periodogram", main = "",
+    type = "l")
+abline(h = crit.val, lwd = 2)
+text(7, PP[7]-0.002,7, pos=4)
+text(14, PP[14]+0.002,14, pos=4)
+
+
+###################################################
+### code chunk number 24: Periodogram_plot
+###################################################
 plot(1:50, PP, xlab = "Trial period", ylab = "Periodogram", main = "",
     type = "l")
 abline(h = crit.val, lwd = 2)

@@ -6,7 +6,7 @@ Artificial light curve generator
 }
 \description{
 This function generates light curves (special time series) with unequally sampled observation times, different periodicities both in sampling and observed values, with white and power law (red) noise in the observed values and possibly disturbed observations.
-See \code{\link{RobPer-package}} for more information about light curves and also Thieler, Fried and Rathjens (2013) for more details in general.
+See \code{\link{RobPer-package}} for more information about light curves and also Thieler, Fried and Rathjens (2016) for more details in general.
 }
 \usage{
 tsgen(ttype, ytype, pf, redpart, s.outlier.fraction = 0, interval, npoints,
@@ -72,7 +72,7 @@ In case of \code{s.outlier.fraction=0} and \code{interval=FALSE}, the function r
 \references{
 Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detection in Irregularly Sampled Light Curves by Robust Regression and Outlier Detection. Statistical Analysis and Data Mining, 6 (1), 73-89
 
-Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Technical Report 2, Collaborative Research Center SFB 876, TU Dortmund University, available at \url{http://sfb876.tu-dortmund.de/PublicPublicationFiles/thieler_etal_2013b.pdf} 
+Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 }
 \author{
 Anita M. Thieler and Jonathan Rathjens

@@ -1,18 +1,26 @@
 Package: RobPer
 Type: Package
 Title: Robust Periodogram and Periodicity Detection Methods
-Version: 1.2.1
-Date: 2015-03-02
-Author: Anita M. Thieler, Jonathan Rathjens and Roland Fried, with contributions from Brenton R. Clarke, Uwe Ligges, Matias Salibian-Barrera, Gert Willems and Victor Yohai
-Maintainer: Jonathan Rathjens <jonathan.rathjens@tu-dortmund.de>
+Version: 1.2.2
+Date: 2016-03-27
+Authors@R: c(person("Anita M.", "Thieler", role = "aut"), person("Jonathan", "Rathjens", role = c("aut", "cre"), email = "jonathan.rathjens@tu-dortmund.de"), person("Roland", "Fried", role = "aut"), person("Brenton R.", "Clarke", role = "ctb", comment = "function betaCvMfit()"), person("Uwe", "Ligges", role = "ctb", comment = "function TK95()"), person("Matias", "Salibian-Barrera", role = "ctb", comment = "functions FastS() and FastTau()"), person("Gert", "Willems", role = "ctb", comment = "function FastTau()"), person("Victor", "Yohai", role = "ctb", comment = "function FastS()"))
 Depends: robustbase, quantreg, splines, BB, rgenoud
-Description: Calculates periodograms based on (robustly) fitting periodic functions to light curves (irregularly observed time series, possibly with measurement accuracies, occurring in astroparticle physics). Three main functions are included: RobPer calculates the periodogram. Outlying periodogram bars (indicating a period) can be detected with betaCvMfit. Artificial light curves can be generated using the function tsgen. For more details see Thieler, Fried and Rathjens (2013).
-License: GPL-2 | GPL-3
+Description: Calculates periodograms based on (robustly) fitting periodic functions to light curves (irregularly observed time series, possibly with measurement accuracies, occurring in astroparticle physics). Three main functions are included: RobPer() calculates the periodogram. Outlying periodogram bars (indicating a period) can be detected with betaCvMfit(). Artificial light curves can be generated using the function tsgen(). For more details see the corresponding article: Thieler, Fried and Rathjens (2016), Journal of Statistical Software 69(9), 1-36, <doi:10.18637/jss.v069.i09>.
+License: GPL-3
 Copyright: The data in star_groj0422.32 have been kindly provided by
         the NASA. The data in Mrk421 and Mrk501 have been kindly
         provided by the Deutsches Elektronen-Synchrotron. See the
         respective documentation.
-Packaged: 2015-03-02 08:14:38 UTC; jrathjens
 NeedsCompilation: no
+Packaged: 2016-03-27 14:14:07 UTC; jrathjens
+Author: Anita M. Thieler [aut],
+  Jonathan Rathjens [aut, cre],
+  Roland Fried [aut],
+  Brenton R. Clarke [ctb] (function betaCvMfit()),
+  Uwe Ligges [ctb] (function TK95()),
+  Matias Salibian-Barrera [ctb] (functions FastS() and FastTau()),
+  Gert Willems [ctb] (function FastTau()),
+  Victor Yohai [ctb] (function FastS())
+Maintainer: Jonathan Rathjens <jonathan.rathjens@tu-dortmund.de>
 Repository: CRAN
-Date/Publication: 2015-03-02 09:40:20
+Date/Publication: 2016-03-27 17:42:26

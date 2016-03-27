@@ -1,4 +1,4 @@
-\encoding{utf8}
+\encoding{latin1}
 \name{RobPer-package}
 \alias{RobPer-package}
 \docType{package}
@@ -12,9 +12,9 @@ Calculates periodograms based on (robustly) fitting periodic functions to light 
 \tabular{ll}{
 Package: \tab RobPer\cr
 Type: \tab Package\cr
-Version: \tab 1.2.1\cr
-Date: \tab 2015-03-02\cr
-License: \tab GPL-2 | GPL-3 \cr
+Version: \tab 1.2.2\cr
+Date: \tab 2016-03-27\cr
+License: \tab GPL-3 \cr
 }
 Light curves occur in astroparticle physics and are irregularly sampled times series
 \eqn{(t_i, y_i)_{i=1,\ldots,n}}{(t[i], y[i]), i=1,\ldots,n,}  or \eqn{(t_i, y_i, s_i)_{i=1,\ldots,n}}{(t[i], y[i], s[i]), i=1,\ldots,n,} consisting of unequally 
@@ -25,9 +25,9 @@ The observed values \eqn{y_i}{y[i]} may possibly contain a periodic fluctuation 
 fluctuation period \eqn{p_f}{pf}.  One is interested in finding \eqn{p_f}{pf}. The measurement 
 accuracies \eqn{s_i}{s[i]} give information about how precise the \eqn{y_i}{y[i]} were measured. 
 They can be interpreted as estimates for the standard deviations of the observed values.
-For more details see Thieler et al. (2013) or Thieler, Fried and Rathjens (2013). 
+For more details see Thieler et al. (2013) or Thieler, Fried and Rathjens (2016). 
 
-This package includes three main functions: \code{RobPer} calculates the periodogram, possibly taking into account measurement accuracies. With \code{betaCvMfit}, outlying periodogram bars (indicating a period) can be detected. This function bases on robustly fitting a distribution using \enc{CramÃ©r}{Cramer}-von-Mises (CvM) distance minimization (see also Clarke, McKinnon and Riley 2012).  The function \code{tsgen} can be used to generate artificial light curves. For more details about the implementation see Thieler, Fried and Rathjens (2013).
+This package includes three main functions: \code{RobPer} calculates the periodogram, possibly taking into account measurement accuracies. With \code{betaCvMfit}, outlying periodogram bars (indicating a period) can be detected. This function bases on robustly fitting a distribution using \enc{Cramér}{Cramer}-von-Mises (CvM) distance minimization (see also Clarke, McKinnon and Riley 2012).  The function \code{tsgen} can be used to generate artificial light curves. For more details about the implementation see Thieler, Fried and Rathjens (2016).
 
 A preliminary version of this package is used in Thieler et al. (2013). The \code{FastS}-function  
 and the \code{FastTau}-function
@@ -52,7 +52,7 @@ Salibian-Barrera, M., Willems, G. and Zamar, R. (2008): The Fast-tau Estimator f
 
 Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detection in Irregularly Sampled Light Curves by Robust Regression and Outlier Detection. Statistical Analysis and Data Mining, 6 (1), 73-89
 
-Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Technical Report 2, Collaborative Research Center SFB 876, TU Dortmund University, available at \url{http://sfb876.tu-dortmund.de/PublicPublicationFiles/thieler_etal_2013b.pdf} 
+Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 }
 
 \examples{

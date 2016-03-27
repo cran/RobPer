@@ -38,7 +38,7 @@ For \code{ttype="sine"} and \code{ttype="trian"}, observation cycles \eqn{z^\sta
 \deqn{d_{trian}(x)= 6-6x, \quad \frac{2}{3}<x\leq 1}{d.trian(x)=6-6x if 2/3 < x \le 1} (for \code{ttype="trian"}).
 The unsorted observation times \eqn{t^\star_i}{t.star[i]} are then generated using 
 \deqn{t^\star_i= \varphi^\star_i+(z^\star_i-1)p_s.}{t.star[i]=\phi.star[i]+(z.star[i]-1)*ps.}
-Separately sampling observation cycle and phase was proposed by Hall and Yin (2003). For more details see Thieler, Fried and Rathjens (2013) or Thieler et al. (2013).
+Separately sampling observation cycle and phase was proposed by Hall and Yin (2003). For more details see Thieler, Fried and Rathjens (2016) or Thieler et al. (2013).
 }
 \value{
 numeric vector: Ordered observation times.
@@ -66,6 +66,6 @@ Hall, P. and Yin, J. (2003): Nonparametric Methods for Deconvolving Multiperiodi
 
 Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detection in Irregularly Sampled Light Curves by Robust Regression and Outlier Detection. Statistical Analysis and Data Mining, 6 (1), 73-89
 
-Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Technical Report 2, Collaborative Research Center SFB 876, TU Dortmund University, available at \url{http://sfb876.tu-dortmund.de/PublicPublicationFiles/thieler_etal_2013b.pdf}
+Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 
 }

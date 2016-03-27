@@ -47,12 +47,12 @@ with \eqn{\varphi_1(t) = t mod1 = (t-\lfloor t/p_f \rfloor p_f)/p_f}{phase(t) = 
 numeric vector: Values \eqn{y_{f;1},\ldots,y_{f;n}}{yf[1],\ldots,yf[n]}.
 }
 
-\note{This function is used in Thieler et al. (2013). See also Thieler, Fried and Rathjens (2013).}
+\note{This function is used in Thieler et al. (2013). See also Thieler, Fried and Rathjens (2016).}
 
 \references{
 Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detection in Irregularly Sampled Light Curves by Robust Regression and Outlier Detection. Statistical Analysis and Data Mining, 6 (1), 73-89
 
-Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Technical Report 2, Collaborative Research Center SFB 876, TU Dortmund University, available at \url{http://sfb876.tu-dortmund.de/PublicPublicationFiles/thieler_etal_2013b.pdf} 
+Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 }
 \author{
 Anita M. Thieler and Jonathan Rathjens

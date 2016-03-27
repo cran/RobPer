@@ -1,0 +1,25 @@
+bibentry(bibtype = "Article",
+  title        = "{RobPer}: An {R} Package to Calculate Periodograms for Light Curves Based on Robust Regression",
+  author       = c(person(given = c("Anita", "M."),
+                          family = "Thieler",
+                          email = "anita.thieler@tu-dortmund.de"),
+                   person(given = "Roland",
+                          family = "Fried"),
+                   person(given = "Jonathan",
+                          family = "Rathjens",
+			  email = "jonathan.rathjens@tu-dortmund.de")),
+  journal      = "Journal of Statistical Software",
+  year         = "2016",
+  volume       = "69",
+  number       = "9",
+  pages        = "1--36",
+  doi          = "10.18637/jss.v069.i09",
+
+  header       = "To cite RobPer in publications use:",
+  textVersion  =
+  paste("Anita M. Thieler, Roland Fried, Jonathan Rathjens (2016).",
+        "RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression.",
+        "Journal of Statistical Software, 69(9), 1-36.",
+        "doi:10.18637/jss.v069.i09")
+)
+

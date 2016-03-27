@@ -7,7 +7,7 @@ Periodogram based on (robustly) fitting a periodic function to a light curve
 }
 \description{
 Calculates a periodogram by fitting a periodic function to a light curve, using a possibly robust regression technique and possibly taking into account measurement accuracies.  
-See \code{\link{RobPer-package}} for more information about light curves. For a lot of more details see Thieler, Fried and Rathjens (2013) and Thieler et al. (2013).
+See \code{\link{RobPer-package}} for more information about light curves. For a lot of more details see Thieler, Fried and Rathjens (2016) and Thieler et al. (2013).
 }
 \usage{
 RobPer(ts, weighting, periods, regression, model, steps = 10, tol = 1e-03,
@@ -72,7 +72,7 @@ list of three integers \code{N}, \code{kk} and \code{tt}, two positive numbers \
 } 
 }
 \details{
-For each trial period, a periodic function (defined by \code{model}) is fitted to the light curve using regression technique \code{regression}. The periodogram bar is the coefficient of determination. In case of \code{model="2step"}, two different step functions with opposed jumping times are fitted separately and the periodogram bar is the mean of both coefficients of determination. For a lot of more details see Thieler, Fried and Rathjens (2013) and Thieler et al. (2013).
+For each trial period, a periodic function (defined by \code{model}) is fitted to the light curve using regression technique \code{regression}. The periodogram bar is the coefficient of determination. In case of \code{model="2step"}, two different step functions with opposed jumping times are fitted separately and the periodogram bar is the mean of both coefficients of determination. For a lot of more details see Thieler, Fried and Rathjens (2016) and Thieler et al. (2013).
 }
 \value{
 numeric vector: Periodogram bars related to the trial periods.
@@ -90,7 +90,7 @@ Stellingwerf, R. F. (1978): Period Determination Using Phase Dispersion Minimiza
 
 Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detection in Irregularly Sampled Light Curves by Robust Regression and Outlier Detection. Statistical Analysis and Data Mining, 6 (1), 73-89
 
-Thieler, A. M., Fried, R. and Rathjens, J. (2013): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Technical Report 2, Collaborative Research Center SFB 876, TU Dortmund University, available at \url{http://sfb876.tu-dortmund.de/PublicPublicationFiles/thieler_etal_2013b.pdf} 
+Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 
 Zechmeister, M. and \enc{Kürster}{Kuerster}, M. (2009): The Generalised Lomb-Scargle Periodogram. A New Formalism for the Floating-Mean and Keplerian Periodograms. Astronomy and Astrophysics, 496 (2), 577-584
 }
