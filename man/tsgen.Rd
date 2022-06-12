@@ -21,10 +21,10 @@ character string: Specifying the sampling pattern. Possible choices are \code{"e
 character string: Specifying the shape of the periodic fluctuation with period \eqn{p_f}{pf}. Possible choices are \code{"const"} for constantly being zero (so no periodicity), \code{"sine"} for a sine, \code{"trian"} for a periodic triangular function, \code{"peak"} for a peak function (see Details and \code{\link{signalgen}} for more details).
 }
   \item{pf}{
-positive number: Period \eqn{p_f}{} of the periodic fluctuation, argument of \code{signalgen} (see Details and \code{\link{signalgen}}).
+positive number: Period \eqn{p_f}{pf} of the periodic fluctuation, argument of \code{signalgen} (see Details and \code{\link{signalgen}}).
 }
   \item{redpart}{
-numeric value in [0,1]: Proportion of the power law noise in noise components (see Details). The generated measurement accuracies \eqn{s_i}{s} do not contain information about this noise component. 
+numeric value in [0,1]: Proportion of the power law noise in noise components (see Details). The generated measurement accuracies \eqn{s_i}{s[i]} do not contain information about this noise component. 
 }
   \item{s.outlier.fraction}{
 numeric value in [0,1]: Fraction of measurement accuracies to be replaced by outliers. A value of 0 means that no measurement accuracy is replaced by an outlier (for more details see \code{\link{disturber}}). 
@@ -36,10 +36,10 @@ logical: If \code{TRUE}, the observed values belonging to a random time interval
 integer value: Defines the sample size \eqn{n}{n} for the generated light curve.
 }
   \item{ncycles}{
-integer value: number \eqn{n_s}{} of sampling cycles that is observed (see Details). 
+integer value: number \eqn{n_s}{ns} of sampling cycles that is observed (see Details). 
 }
   \item{ps}{
-positive number: Sampling period \eqn{p_s}{}, influencing the sampling and how the light curve is disturbed (see Details and \code{\link{disturber}}).
+positive number: Sampling period \eqn{p_s}{ps}, influencing the sampling and how the light curve is disturbed (see Details and \code{\link{disturber}}).
 }
   \item{SNR}{
 positive number: Defines the relation between signal \eqn{y_f}{yf} and noise \eqn{y_w+y_r}{yw+yr} (see Details).
@@ -65,9 +65,9 @@ from a Gamma(3,10)-distribution and a white noise component
 In case of \code{s.outlier.fraction=0} and \code{interval=FALSE}, the function returns all values unchanged.
 }
 \value{
-  \item{tt}{numeric vector: Generated observation times\eqn{\ t_1,\ldots,t_n.}{.}}    
-  \item{y}{numeric vector: Generated observation values\eqn{\ y_1,\ldots,y_n.}{.}}
-  \item{s}{numeric vector: Generated measurement accuracies\eqn{\ s_1,\ldots,s_n.}{.}}                                       
+  \item{tt}{numeric vector: Generated observation times\eqn{\ t_1,\ldots,t_n}.}    
+  \item{y}{numeric vector: Generated observation values\eqn{\ y_1,\ldots,y_n}.} 
+  \item{s}{numeric vector: Generated measurement accuracies\eqn{\ s_1,\ldots,s_n}.}                                       
 }
 \references{
 Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detection in Irregularly Sampled Light Curves by Robust Regression and Outlier Detection. Statistical Analysis and Data Mining, 6 (1), 73-89

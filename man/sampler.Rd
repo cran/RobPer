@@ -15,20 +15,20 @@ sampler(ttype, npoints, ncycles, ps = 1)
 character string: Specifying the sampling pattern. Possible options: \code{"equi"} and \code{"unif"} for unperiodic sampling, \code{"sine"} and \code{"trian"} for sampling with a periodic density (see Details). 
 }
   \item{npoints}{
-integer: Sample size \eqn{n}{} (see Details).
+integer: Sample size \eqn{n} (see Details).
 }
   \item{ncycles}{
-integer: Number of sampling cycles \eqn{n_s}{} (see Details).
+integer: Number of sampling cycles \eqn{n_s}{ns} (see Details).
 }
   \item{ps}{
-positive numeric value: Sampling period \eqn{p_s}{} (see Details).
+positive numeric value: Sampling period \eqn{p_s}{ps} (see Details).
 }
 }
 \details{
 \code{sampler} generates observation times \eqn{t_1,\ldots,t_n}{t} with a periodic sampling of period \eqn{p_s}{ps}. Four distributions are possible:
 In case of \code{ttype="equi"}, the \eqn{t_i}{t[i]} are equidistantly sampled with \eqn{t_i=i\frac{p_sn_s}{n}}{t[i]=i*ps*ncycles/npoints}.
 For \code{ttype="unif"}, the observation times are independently drawn form a uniform distribution on \eqn{[0,n_sp_s]}{[0,ncycles*ps]}.
-Both these sampling schemes are aperiodic, the sampling period \eqn{p_s}{} only influences the length \eqn{t_n-t_1}{t[n]-t[1]} of the series of observation times.                       
+Both these sampling schemes are aperiodic, the sampling period \eqn{p_s}{ps} only influences the length \eqn{t_n-t_1}{t[n]-t[1]} of the series of observation times.                       
 
 
 

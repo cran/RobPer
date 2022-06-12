@@ -14,16 +14,16 @@ disturber(tt, y, s, ps, s.outlier.fraction = 0, interval)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{tt}{
-numeric vector: Observation times \eqn{t_1,\ldots,t_n}{} (see Details).
+numeric vector: Observation times \eqn{t_1,\ldots,t_n} (see Details).
 }
   \item{y}{
-numeric vector: Observed values \eqn{y_1,\ldots,y_n}{} (see Details).
+numeric vector: Observed values \eqn{y_1,\ldots,y_n} (see Details).
 }
   \item{s}{
-numeric vector: Measurement accuracies \eqn{s_1,\ldots,s_n}{} (see Details).
+numeric vector: Measurement accuracies \eqn{s_1,\ldots,s_n} (see Details).
 }
   \item{ps}{
-positive value: Sampling period\eqn{\ p_s.}{.} Indirectly defines the length of the time interval, in which observed values \eqn{y_i}{} are replaced by atypical values (see Details).
+positive value: Sampling period \eqn{p_s}{ps} indirectly defines the length of the time interval, in which observed values \eqn{y_i} are replaced by atypical values (see Details).
 }
   \item{s.outlier.fraction}{
 numeric value in [0,1]: Defines the proportion of measurement accuracies that is replaced by outliers (see Details). A value of 0 means that no measurement accuracy is replaced by an outlier.

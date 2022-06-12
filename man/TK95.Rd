@@ -6,7 +6,7 @@
 Power law noise generator
 }
 \description{
-Generates an equidistant time series of power law noise according to Timmer and \enc{König}{Koenig} (1995).
+Generates an equidistant time series of power law noise according to Timmer and \enc{KÃ¶nig}{Koenig} (1995).
 }
 \usage{
 TK95(N = 1000, alpha = 1.5)
@@ -30,7 +30,7 @@ Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detectio
 
 Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 
-Timmer, J. and \enc{König}{Koenig}, M. (1995) On Generating Power Law Noise. Astronomy and Astrophysics, 300, 707-710
+Timmer, J. and \enc{KÃ¶nig}{Koenig}, M. (1995) On Generating Power Law Noise. Astronomy and Astrophysics, 300, 707-710
 }
 
 

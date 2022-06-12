@@ -14,14 +14,14 @@ signalgen(tt, ytype, pf = 1)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{tt}{
-numeric vector: Observation times \eqn{t_1,\ldots,t_n}{} (see Details).
+numeric vector: Observation times \eqn{t_1,\ldots,t_n} (see Details).
 }
   \item{ytype}{
 character string: Specifying the shape of the periodic fluctuation (see Details). Possible choices are \code{"const"}, \code{"sine"}, \code{"trian"},\code{"peak"}.
 
 }
   \item{pf}{
-positive numeric value: Fluctuation period\eqn{ p_f.}{.}
+positive numeric value: Fluctuation period \eqn{ p_f}{pf}.
 }
 }
 \details{

@@ -6,7 +6,7 @@
 Power law noise generator for unequally sampled observation times
 }
 \description{
-Generates power law noise using \code{\link{TK95}} according to Timmer and \enc{König}{Koenig} (1995), with modifications proposed in Uttley, McHardy and Papadakis (2002) for given irregular observation times.
+Generates power law noise using \code{\link{TK95}} according to Timmer and \enc{KÃ¶nig}{Koenig} (1995), with modifications proposed in Uttley, McHardy and Papadakis (2002) for given irregular observation times.
 
 }
 \usage{
@@ -35,7 +35,7 @@ Thieler, A. M., Backes, M., Fried, R. and Rhode, W. (2013): Periodicity Detectio
 
 Thieler, A. M., Fried, R. and Rathjens, J. (2016): RobPer: An R Package to Calculate Periodograms for Light Curves Based on Robust Regression. Journal of Statistical Software, 69 (9), 1-36, <doi:10.18637/jss.v069.i09>
 
-Timmer, J. and \enc{König}{Koenig}, M. (1995) On Generating Power Law Noise. Astronomy and Astrophysics, 300, 707-710
+Timmer, J. and \enc{KÃ¶nig}{Koenig}, M. (1995) On Generating Power Law Noise. Astronomy and Astrophysics, 300, 707-710
 
 Uttley, P., McHardy, I. M. and Papadakis, I. E. (2002) Measuring the Broad-Band Power Spectra of Active Galactic Nuclei with RXTE. Monthly Notices of the Royal Astronomical Society, 332 (1), 231-250
 }
